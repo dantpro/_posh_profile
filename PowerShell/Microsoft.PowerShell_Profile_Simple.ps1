@@ -1,3 +1,5 @@
+# Just copy to C:\Users\<UserName>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+
 # Prompt ######
 #<#
 function global:prompt {
