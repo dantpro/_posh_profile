@@ -1,2 +1,11 @@
 # _posh_profile
-My powershell profile(s)
+
+__My powershell profile(s)__
+
+Powershell (Core) Profile:  
+   
+`C:\Users\<UserName>\Documents\PowerShell`
+
+Windows Powershell (Desktop) Profile:     
+
+`C:\Users\<UserName>\Documents\WindowsPowershell`
