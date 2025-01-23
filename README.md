@@ -8,4 +8,4 @@ Powershell (Core) Profile:
 
 Windows Powershell (Desktop) Profile:     
 
-`C:\Users\<UserName>\Documents\WindowsPowershell`
+`C:\Users\<UserName>\Documents\WindowsPowerShell`
