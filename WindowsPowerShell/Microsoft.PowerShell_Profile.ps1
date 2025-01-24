@@ -41,7 +41,9 @@ if (Test-Path($ChocolateyProfile)) {
 #
 #<#
 function global:prompt {
-    $host.ui.RawUI.WindowTitle = $(get-location)
+    $host.ui.RawUI.WindowTitle = $(Get-Location)
+    # Write-Host $(Get-Location)
+    # Write-Host -
     Write-Host -Object "[" -NoNewLine
     Write-Host -Object "PoSh" -NoNewline -ForegroundColor Cyan
     return "] "
