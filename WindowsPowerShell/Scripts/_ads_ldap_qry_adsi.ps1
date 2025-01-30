@@ -42,6 +42,6 @@ $a.PropertiesToLoad.add("samaccountname")| Out-Null
 $a.PropertiesToLoad.add("distinguishedname")| Out-Null
 $results = $a.findall()
 
-$results
+$results.path
 "---"
 $results.count
