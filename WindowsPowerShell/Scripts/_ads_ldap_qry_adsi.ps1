@@ -1,3 +1,13 @@
+#$searcher = [ADSISearcher]"sAMAccountType=$(0x30000000)"
+#
+# get all results, do not stop at 1000 results
+#$searcher.PageSize = 1000
+#
+#$searcher.FindAll() | 
+#  ForEach-Object { $_.GetDirectoryEntry() } | 
+#  Select-Object -Property * |
+#  Out-GridView 
+
 $root = "LDAP://dc=contoso,dc=lab"
 
 $ldap_filter = "(&(objectClass=person)(objectClass=user))"                                                      # USERS + COMP
