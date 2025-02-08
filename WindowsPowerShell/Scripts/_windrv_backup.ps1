@@ -17,3 +17,8 @@ Export-WindowsDriver –Online -Destination C:\-\drv\
 # Get-WindowsDriver -Online | where { ($_.ProviderName -like "Realtek") –and ($_.ClassName -like "Net")}
 # Mkdir C:\-\drv\realtek
 # pnputil.exe /export-driver oem20.inf C:\-\drv\realtek\
+
+# Get-WmiObject -Class Win32_PnpEntity -ComputerName localhost -Namespace Root\CIMV2 |
+#    Where-Object {$_.ConfigManagerErrorCode -gt 0 } |
+#    Select-Object Name, DeviceID, ConfigManagerErrorCode | 
+#    Format-Table
