@@ -1,9 +1,10 @@
 # https://winitpro.ru/index.php/2014/07/31/eksport-drajverov-s-pomoshhyu-powershell-v-windows-8-1-u1/
 
 Export-WindowsDriver –Online -Destination C:\-\drv\
-# & "dism /online /export-driver /destination:C:\-\drv"
+# & "dism" "/online" "/export-driver" "/destination:C:\-\drv"
 
-# & "pnputil.exe /add-driver C:\-\drv\*.inf /subdirs /install"
+# pnputil.exe /add-driver C:\-\drv\*.inf /subdirs /install
+# & "pnputil.exe" "/add-driver" "C:\-\drv\*.inf" "/subdirs" "/install"
 
 # $BackupDrv = Export-WindowsDriver -Online -Destination C:\-\drv\
 # $BackupDrv | Select-Object ClassName, ProviderName, Date, Version | Sort-Object ClassName
