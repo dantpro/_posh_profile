@@ -58,7 +58,7 @@ Function Get-EnvAll {Get-ChildItem env:* | Sort-Object -Property Name}
 #
 Function Edit-Profile {ise $profile}
 
-# create password
+# Create password
 #
 # https://stackoverflow.com/questions/37256154/powershell-password-generator-how-to-always-include-number-in-string
 
@@ -109,18 +109,22 @@ function New-Password {
     [CmdletBinding()]
     param(
         [ValidateRange(1, [uint32]::MaxValue)]
-        [uint32] $Length = 32,
+        
+        #-- [uint32] $Length = 32,
+        [uint32] $Length = 16,
 
-        [uint32] $MinimumUpper,
-        [uint32] $MinimumLower,
-        [uint32] $MinimumNumber,
-        [uint32] $MinimumSymbol,
+        [uint32] $MinimumUpper = 5,
+        [uint32] $MinimumLower = 5,
+        [uint32] $MinimumNumber = 5,
+        [uint32] $MinimumSymbol = 1,
 
         [char[]] $UpperCharSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
         [char[]] $LowerCharSet = 'abcedefghijklmnopqrstuvwxyz',
         [char[]] $NumberCharSet = '0123456789',
-        [char[]] $SymbolCharSet = '!@#$%^&*()[]{},.:`~_-=+',  # Excludes problematic characters like ;'"/\,
-
+        
+        #-- [char[]] $SymbolCharSet = '!@#$%^&*()[]{},.:`~_-=+',  # Excludes problematic characters like ;'"/\,
+        [char[]] $SymbolCharSet = '-',
+        
         [switch] $JsonSafe
     )
 
