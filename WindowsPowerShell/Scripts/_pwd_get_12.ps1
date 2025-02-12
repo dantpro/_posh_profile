@@ -1,3 +1,6 @@
+# https://arminreiter.com/2021/07/3-ways-to-generate-passwords-in-powershell/
+#
+#
 function Get-Password {
     param (
         [Parameter(Mandatory)]
