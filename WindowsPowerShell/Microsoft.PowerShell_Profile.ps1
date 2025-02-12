@@ -56,7 +56,7 @@ function global:prompt {
 
 # Misc #####
 #
-Set-StrictMode -Version 2
+Set-StrictMode -Version 1
 <#
 1.0
     Prohibits references to uninitialized variables, except for uninitialized variables in strings.
