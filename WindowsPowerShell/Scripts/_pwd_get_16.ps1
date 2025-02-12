@@ -1,4 +1,4 @@
-function Get-RndPwdParam {
+function Get-Password {
     param (
         [Parameter(Mandatory)]
         [ValidateRange(4,[int]::MaxValue)]
@@ -39,14 +39,14 @@ function Get-RndPwdParam {
     if($special -gt ($password.ToCharArray() | Where-Object {$_ -cin $sCharSet.ToCharArray() }).Count) { $valid = $false }
  
     if(!$valid) {
-         $password = Get-RndPwdParam $length $upper $lower $numeric $special
+         $password = Get-Password $length $upper $lower $numeric $special
     }
     return $password
 }
 
 
-Get-RndPwdParam -length 16 -upper 5 -lower 6 -numeric 5 -special 0
-Get-RndPwdParam -length 16 -upper 5 -lower 6 -numeric 5 -special 0
-Get-RndPwdParam -length 16 -upper 5 -lower 6 -numeric 5 -special 0
-Get-RndPwdParam -length 16 -upper 5 -lower 6 -numeric 5 -special 0
-Get-RndPwdParam -length 16 -upper 5 -lower 6 -numeric 5 -special 0
+Get-Password -length 16 -upper 5 -lower 6 -numeric 5 -special 0
+Get-Password -length 16 -upper 5 -lower 6 -numeric 5 -special 0
+Get-Password -length 16 -upper 5 -lower 6 -numeric 5 -special 0
+Get-Password -length 16 -upper 5 -lower 6 -numeric 5 -special 0
+Get-Password -length 16 -upper 5 -lower 6 -numeric 5 -special 0
