@@ -9,8 +9,7 @@ Export-WindowsDriver –Online -Destination C:\-\drv\
 # $BackupDrv = Export-WindowsDriver -Online -Destination C:\-\drv\
 # $BackupDrv | Select-Object ClassName, ProviderName, Date, Version | Sort-Object ClassName
 
-# $BackupDrv| Select-Object ClassName, ProviderName, Date, Version |
-#    Export-Csv C:\-\drv\drivers_list.csv -NoTypeInformation -Encoding UTF8
+# $BackupDrv| Select-Object ClassName, ProviderName, Date, Version | Export-Csv C:\-\drv\drivers_list.csv -NoTypeInformation -Encoding UTF8
 
 # pnputil.exe /enum-drivers
 # pnputil.exe /add-driver C:\#\DRV\_EXP\*.inf /subdirs /install
@@ -23,3 +22,7 @@ Export-WindowsDriver –Online -Destination C:\-\drv\
 #    Where-Object {$_.ConfigManagerErrorCode -gt 0 } |
 #    Select-Object Name, DeviceID, ConfigManagerErrorCode | 
 #    Format-Table
+#
+# Get-WmiObject -Class Win32_PnpEntity -ComputerName localhost -Namespace Root\CIMV2 | Where-Object {$_.ConfigManagerErrorCode -gt 0 } | Select-Object Name, DeviceID, ConfigManagerErrorCode | Format-Table
+
+
