@@ -108,3 +108,8 @@ if ($result -and (Test-Path -Path "$env:LOCALAPPDATA\Microsoft\WindowsApps\winge
 # Cleanup
 Push-Location $HOME
 Remove-Item $downloadDir -Recurse -Force
+
+# winget list
+# winget search microsoft.windowsterminal
+# winget install microsoft.windowsterminal
+
