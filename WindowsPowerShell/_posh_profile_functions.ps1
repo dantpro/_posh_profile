@@ -221,3 +221,13 @@ function Invoke-LDAPWhoami
     Write-Host "Current context is: $result"
 }
 ####
+
+# Get-ScriptDirectory ##### 
+#
+# https://www.red-gate.com/simple-talk/development/dotnet-development/further-down-the-rabbit-hole-powershell-modules-and-encapsulation
+
+function Get-ScriptDirectory
+{
+    Split-Path $script:MyInvocation.MyCommand.Path
+}
+###
