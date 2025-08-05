@@ -6,8 +6,8 @@ Get-ADUser -Filter {Enabled -eq $true} -Properties userAccountControl |
 #>
 "---"
 #<#
-Get-ADUser -Filter {PasswordNotRequired -eq $true} -Properties PasswordNotRequired |
-    Select-Object Name, PasswordNotRequired, distinguishedName |
+Get-ADUser -Filter {PasswordNotRequired -eq $true} -Properties PasswordNotRequired, userAccountControl |
+    Select-Object Name, PasswordNotRequired, userAccountControl, distinguishedName |
     Sort-Object Name
 #>
 "---"
