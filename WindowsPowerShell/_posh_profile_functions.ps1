@@ -231,3 +231,12 @@ function Get-ScriptDirectory
     Split-Path $script:MyInvocation.MyCommand.Path
 }
 ###
+
+# Get-HistFull
+#
+function Get-HistFull
+{
+    Get-Content (Get-PSReadlineOption).HistorySavePath
+}
+###
+
