@@ -14,5 +14,10 @@ Get-CimInstance -ComputerName localhost -Query "SELECT * FROM Win32_OperatingSys
 # laptop
 Get-CimInstance -ComputerName localhost -Query "SELECT * FROM Win32_ComputerSystem WHERE PCSystemType = 2" |Format-List
 
+# computer name/s
+Get-CimInstance -ComputerName localhost -Query "SELECT Name FROM Win32_ComputerSystem WHERE Name LIKE '%-FS%' OR Name LIKE '%-SRV-FS-%'"
+
+
+
 
 
